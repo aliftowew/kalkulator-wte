@@ -109,7 +109,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(f"""
         <div class="metric-box metric-box-teal">
-            <p class="metric-title">Listrik yg dihasilkan PSLE (e_ton)</p>
+            <p class="metric-title">Listrik dihasilkan PSLE</p>
             <p class="metric-value">{format_num(e_ton)} kWh</p>
             <p class="metric-desc">Dari {kapasitas_mw} MW & {KAPASITAS_SAMPAH_TON} Ton/Hari</p>
         </div>
@@ -118,7 +118,7 @@ with col1:
 with col2:
     st.markdown(f"""
         <div class="metric-box metric-box-grey">
-            <p class="metric-title">Pembelian per Ton (R_ton)</p>
+            <p class="metric-title">Pembelian per Ton</p>
             <p class="metric-value">{format_currency(r_ton)}</p>
             <p class="metric-desc">USD {HARGA_BELI_USD}/kWh × Kurs Rp {kurs_str}</p>
         </div>
