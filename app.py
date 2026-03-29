@@ -74,7 +74,7 @@ st.markdown("### ⚙️ Pengaturan Parameter")
 p_col1, p_col2, p_col3 = st.columns(3)
 
 with p_col1:
-    kapasitas_mw = st.slider("Kapasitas PSEL (MW)", min_value=5, max_value=50, value=15, step=1)
+    kapasitas_mw = st.slider("Kapasitas PSEL (MW)", min_value=5, max_value=50, value=25, step=1)
 
 with p_col2:
     kurs_usd = st.number_input("Kurs (Rp/USD)", min_value=14000, max_value=18000, value=16957, step=100)
@@ -128,7 +128,7 @@ with col2:
 with col3:
     st.markdown(f"""
         <div class="metric-box metric-box-red">
-            <p class="metric-title">Subsidi Pemerintah (\Delta)</p>
+            <p class="metric-title">Subsidi Pemerintah</p>
             <p class="metric-value">{format_currency(selisih_bayar)}</p>
             <p class="metric-desc">Selisih Bayar per Ton</p>
         </div>
