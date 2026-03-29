@@ -76,7 +76,7 @@ st.markdown("### ⚙️ Pengaturan Parameter")
 p_col1, p_col2 = st.columns(2)
 
 with p_col1:
-    kapasitas_mw = st.slider("Kapasitas Listrik per PSEL (MW)", min_value=5, max_value=50, value=15, step=1)
+    kapasitas_mw = st.slider("Kapasitas Listrik per PSEL (MW)", min_value=5, max_value=50, value=35, step=1)
 
 with p_col2:
     kurs_usd = st.number_input("Nilai Tukar (Kurs Rupiah per 1 USD)", min_value=14000, max_value=18000, value=16957, step=100)
@@ -109,7 +109,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(f"""
         <div class="metric-box metric-box-teal">
-            <p class="metric-title">Energi per Ton (e_ton)</p>
+            <p class="metric-title">Listrik yg dihasilkan PSLE (e_ton)</p>
             <p class="metric-value">{format_num(e_ton)} kWh</p>
             <p class="metric-desc">Dari {kapasitas_mw} MW & {KAPASITAS_SAMPAH_TON} Ton/Hari</p>
         </div>
