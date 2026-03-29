@@ -58,37 +58,6 @@ st.markdown("""
         margin-bottom: 10px;
         border: 1px solid #333;
     }
-
-    /* Footer Branding */
-    .footer-container {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin-top: 50px;
-        padding: 40px 0;
-        text-align: center;
-        background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url('https://www.publicdomainpictures.net/pictures/360000/velka/chalkboard-with-equations.jpg');
-        background-size: cover;
-        background-position: center;
-        border-top: 1px solid #333;
-    }
-
-    .footer-tagline-box {
-        display: inline-block;
-        background-color: white;
-        color: #1a1a1a;
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-size: 18px;
-        font-weight: bold;
-    }
-    
-    .footer-tagline-box i {
-        font-size: 14px;
-        font-weight: normal;
-        color: #555;
-    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -150,7 +119,7 @@ with col1:
 with col2:
     st.markdown(f"""
         <div class="metric-box metric-box-grey">
-            <p class="metric-title">Pembelian per Ton ($R_{{ton}}$)</p>
+            <p class="metric-title">Pembelian per Ton</p>
             <p class="metric-value">{format_currency(r_ton)}</p>
             <p class="metric-desc">USD {HARGA_BELI_USD}/kWh × Kurs Rp {kurs_str}</p>
         </div>
@@ -159,7 +128,7 @@ with col2:
 with col3:
     st.markdown(f"""
         <div class="metric-box metric-box-red">
-            <p class="metric-title">Subsidi Pemerintah ($\Delta$)</p>
+            <p class="metric-title">Subsidi Pemerintah (\Delta)</p>
             <p class="metric-value">{format_currency(selisih_bayar)}</p>
             <p class="metric-desc">Selisih Bayar per Ton</p>
         </div>
@@ -236,15 +205,13 @@ fig.update_xaxes(tickprefix="Rp ", tickformat=",.0f")
 
 st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
 
-# --- Footer Branding ---
+# --- Footer Branding Simpel ---
 st.markdown("""
-<div class="footer-container">
-    <div class="footer-tagline-box">
-        <b>Semua Bisa Dihitung</b><br>
-        <i>by Alif Towew</i>
-    </div>
-    <div style="font-size: 13px; color: #b3b3b3; margin-top: 15px;">
-        Kalkulator ini disusun berdasarkan data asumsi investasi PSEL dan analisis makroekonomi.
-    </div>
+<div style="text-align: center; color: #b3b3b3; font-size: 14px; margin-top: 50px; padding-top: 20px; border-top: 1px solid #333;">
+    <b>Semua Bisa Dihitung</b><br>
+    <i>by Alif Towew</i>
+</div>
+<div style="text-align: center; color: #b3b3b3; font-size: 12px; margin-top: 10px;">
+    Kalkulator ini disusun berdasarkan data asumsi investasi PSEL dan analisis makroekonomi.
 </div>
 """, unsafe_allow_html=True)
